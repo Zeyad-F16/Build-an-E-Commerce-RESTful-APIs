@@ -58,3 +58,17 @@ A RESTful API for building a full-featured E-Commerce application. This API prov
 - express-mongo-sanitize
 - xss-clean
 - Stripe _(for payment processing)_
+
+-   <section id="Deployment">
+      <h2># Deployment</h2>
+      <p>
+        Deployed on render.com synchronized with github repository and connected
+        with mongoDB atlas
+      </p>
+      <p>
+        Main Link :
+        <a href="https://build-an-e-commerce-restful-apis.onrender.com/"
+          >https://build-an-e-commerce-restful-apis.onrender.com/</a
+        >
+      </p>
+    </section>
