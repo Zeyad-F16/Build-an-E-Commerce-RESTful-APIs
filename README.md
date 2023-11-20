@@ -68,10 +68,6 @@ A RESTful API for building a full-featured E-Commerce application. This API prov
           >https://documenter.getpostman.com/view/28843555/2s9Ye8hvvp</a
         >
       </p>
-      <img
-        src="https://res.cloudinary.com/dvvmu40wx/image/upload/v1699631784/eCommerce/Documentation_screen_shot_adxzpn.png"
-        alt="documentation"
-      />
     </section>
     <hr />
 
