@@ -10,15 +10,6 @@
 
 <h4 align="center">Ecommerce API built using NodeJS & Express & MongoDB</h4>
 
-## Table of Contents
-
-- [Description](#description)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
-- [Installation](#installation)
-
-
 ## Description
 
 A RESTful API for building a full-featured E-Commerce application. This API provides the backend functionality required for managing products, users, orders, reviews, wishlist, addresses, coupons and more in an E-Commerce system.
