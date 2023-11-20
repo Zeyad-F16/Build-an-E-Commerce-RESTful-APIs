@@ -59,6 +59,22 @@ A RESTful API for building a full-featured E-Commerce application. This API prov
 - xss-clean
 - Stripe _(for payment processing)_
 
+-   <hr />
+    <section id="Documentation">
+      <h2># Documentation</h2>
+      <p>
+        Documentation Link :
+        <a href="https://documenter.getpostman.com/view/28843555/2s9Ye8hvvp"
+          >https://documenter.getpostman.com/view/28843555/2s9Ye8hvvp</a
+        >
+      </p>
+      <img
+        src="https://res.cloudinary.com/dvvmu40wx/image/upload/v1699631784/eCommerce/Documentation_screen_shot_adxzpn.png"
+        alt="documentation"
+      />
+    </section>
+    <hr />
+
 -   <section id="Deployment">
       <h2># Deployment</h2>
       <p>
