@@ -1,0 +1,12 @@
+const { validationResult } = require('express-validator');
+
+// @desc  Finds the validation errors in this request and wraps them in an object with handy functions
+
+const validatorMiddleWare =  (req,res,next)=>{    
+    const error =validationResult(req);
+    if(!error.isEmpty()){
+        return res.status(400).json({error : error.array()});
+    }
+    next();
+};
+module.exports = validatorMiddleWare;
