@@ -70,13 +70,11 @@ ratingsQuantity:{
    toObject: { virtuals: true }
 });
 
-
 productSchema.virtual('reviews',{
     ref:'Review',
     foreignField :'product',
     localField : '_id'
 });
-
 
 productSchema.pre(/^find/, function(next){
  this.populate({
@@ -91,7 +89,6 @@ const setImageUrl = (doc)=>{
    const  imageURL = `${process.env.BASE_URL}/product/${doc.imageCover}`;
      doc.imageCover = imageURL ;
     }
-
     if(doc.images){
         const imageList = [];
     doc.images.forEach((image)=>{
@@ -106,10 +103,8 @@ productSchema.post('init',(doc)=>{
     setImageUrl(doc);
 });
 
-
 productSchema.post('save',(doc)=>{
     setImageUrl(doc);
 });
-
 
 module.exports = mongoose.model('product',productSchema);

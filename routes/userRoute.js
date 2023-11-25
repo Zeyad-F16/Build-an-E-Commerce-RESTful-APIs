@@ -26,13 +26,14 @@ const{getUser,
 
 const {protrct , allowedTo} = require('../services/authServices');
 
-router.put('/changePassword/:id' , changeUserPasswordValidator , changeUserPassword);
+router.put('/changePassword/:id' ,
+     changeUserPasswordValidator ,
+     changeUserPassword);
 
 router.get('/getMe', protrct , getLoggedUserData , getUserId);
 router.put('/changeMyPassword', protrct , updateLoggedUserPassword);
 router.put('/updateMe', protrct , updateloggedUserValidator , updateLoggedUserData);
 router.put('/deleteMe', protrct , deleteLoggedUserData);
-
 
 router.use(protrct , allowedTo('admin','manager'));
 router.route('/')

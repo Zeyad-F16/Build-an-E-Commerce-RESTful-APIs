@@ -1,7 +1,4 @@
-
 const express = require('express');
-
-
 
 const { getCategoryValidator, 
      createCategoryValidator,
@@ -17,7 +14,6 @@ const { getCategoryValidator,
           uploadCategoryImage,
            resizeImage} = require('../services/categoryServices');
           
-     
 const {protrct , allowedTo} = require('../services/authServices');
 
      const router= express.Router();

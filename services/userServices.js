@@ -71,10 +71,8 @@ exports.changeUserPassword =  asyncHandler( async(req,res,next) => {
 res.status(200).json({data : document});
 });
 
-
 // upload single image 
 exports.uploadUserImage = uploadSingleImage('profileImg');
-
 
 // resize the image 
 exports.resizeImage = asyncHandler(async (req ,res , next)=>{
@@ -93,7 +91,6 @@ exports.resizeImage = asyncHandler(async (req ,res , next)=>{
      next();
  });
 
-
 // @desc    Get logged User data
 // @route   Get /api/v1/User/getMe
 // @access  Private/protect 
@@ -101,8 +98,6 @@ exports.getLoggedUserData = asyncHandler(async(req, res, next) => {
  req.params.id = req.user._id;
 next();
 });
-
-
 
 // @desc    Update logged User Password (user change his password so here we need a token)
 // @route   PUT /api/v1/User/updateMyPassword
@@ -125,8 +120,6 @@ const token = JWT.sign({userId: user._id},process.env.JWT_SECRET_KEY,{
    res.status(200).json({ date: user , token });
 });
 
-
-
 // @desc    Update logged User Password not include ( password , role)
 // @route   PUT /api/v1/User/updateMe
 // @access  Private/protect  
@@ -142,7 +135,6 @@ phone: req.body.phone
 
 res.status(200).json({data: user});
 });
-
 
 // @desc    Deactivate logged user
 // @route   PUT /api/v1/User/deleteMe

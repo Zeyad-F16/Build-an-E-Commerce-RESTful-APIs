@@ -24,7 +24,6 @@ const token = createToken(user._id);
 res.status(201).json({data: sanitizeUser(user) , token})
 });
 
-
 // @desc    login
 // @route   Post /api/v1/auth/login
 // @access  Public
@@ -38,11 +37,8 @@ return next(new ApiError('Incorrect email or password',401));
 
 // 3- generate token
 const token = createToken(user._id);
-
 res.status(200).json({data: user , token})
-
 });
-
 
 // @desc make sure the user is logged in  
 exports.protrct = asyncHandler(async(req, res, next)=>{
@@ -65,11 +61,9 @@ exports.protrct = asyncHandler(async(req, res, next)=>{
 }
 // 4- check if user change his password after token created
 if(CurrentUser.passwordChangedAt){
-  
   const passChangedTimesStamp = parseInt(CurrentUser.passwordChangedAt.getTime()/1000,10);
   if(passChangedTimesStamp > decoded.iat){
     return next(new ApiError('User resently change a password , please login again',401));
-
   }
 }
 req.user = CurrentUser ;
@@ -77,17 +71,12 @@ next();
 });
 
 
-// @desc Authorization (user permissions)
-// (...roles) =>  ['admin','manager']
 exports.allowedTo =(...roles)=> asyncHandler(async(req, res, next)=>{
-   // 1 - access roles
-   // 2 - access registered users (req.user.role)
   if(!roles.includes(req.user.role)){
   return next(new ApiError('you are not allowed to access this route',403));
   }
   next();
 });
-
 
 // @desc    Forget password
 // @route   post /api/v1/auth/forgetPassword
@@ -133,9 +122,7 @@ const message =`Hi ${user.name},\n  We got a request to reset your E-shop passwo
  }
 
 res.status(200).json({status: 'success' ,message : 'Reset code send to Email'});
-
 });
-
 
 // @desc    verify password
 // @route   post /api/v1/auth/verifyResetCode
@@ -166,7 +153,6 @@ res.status(200).json({
 })
 
 });
-
 
 // @desc    reset password
 // @route   post /api/v1/auth/resetPassword

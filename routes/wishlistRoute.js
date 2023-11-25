@@ -2,7 +2,9 @@ const express = require('express');
 
 const {protrct , allowedTo} = require('../services/authServices');
 
-const {addProductToWishlist, removeProductFromWishlist ,getLoggedUserWishlist} = require('../services/wishlistServices');
+const {addProductToWishlist,
+     removeProductFromWishlist ,
+     getLoggedUserWishlist} = require('../services/wishlistServices');
 
 const router = express.Router();
 
@@ -14,6 +16,5 @@ router
 .post( addProductToWishlist);
 
 router.delete('/:productId' , removeProductFromWishlist );
-
 
 module.exports = router;

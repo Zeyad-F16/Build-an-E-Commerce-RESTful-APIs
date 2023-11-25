@@ -19,7 +19,6 @@ const {getBrand,
 
 const {protrct , allowedTo} = require('../services/authServices');
 
-
 router.route('/')
 .get(getBrand)
 
@@ -29,7 +28,6 @@ router.route('/')
      resizeImage ,
      createBrandValidator , 
      createBrand);
-
 
 router.route('/:id')
 .get( getBrandValidator , getBrandId )
@@ -45,7 +43,6 @@ router.route('/:id')
      allowedTo('admin') , 
      deleteBrandValidator ,
      deleteBrand );
-
 
 module.exports = router;
 

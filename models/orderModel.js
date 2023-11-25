@@ -63,8 +63,7 @@ orderSchema.pre(/^find/, function (next) {
     path: 'cartItems.product',
     select: 'title imageCover ',
   });
-
-  next();
+    next();
 });
 
 module.exports = mongoose.model('Order', orderSchema);

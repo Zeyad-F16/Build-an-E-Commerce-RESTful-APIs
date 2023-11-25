@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
-const productModel = require('./productModel')
+const productModel = require('./productModel');
 
 const reviewSchema = new mongoose.Schema({
-
 title:{
     type: String,
 },
@@ -24,7 +23,6 @@ product:{
     required: [true,'Review must belong to product'],
 },
 },{timestamps: true});
-
 
 reviewSchema.pre(/^find/, function (next){
 this.populate({path:'user', select:'name'});
@@ -68,6 +66,5 @@ reviewSchema.post('save',async function () {
 reviewSchema.post('deleteOne',async function () {
     await this.constructor.calcAverageRatingsAndQuantity(this.product);
 });
-
 
 module.exports =  mongoose.model('Review',reviewSchema);

@@ -22,13 +22,18 @@ const {protrct , allowedTo} = require('../services/authServices');
 
 router.route('/')
 .get(createFilterObject , getReviews)
-.post(protrct , allowedTo('user') , setProductIdAndUserIdToBody , createReviewValidator , createReview);
+.post(protrct , allowedTo('user') ,
+      setProductIdAndUserIdToBody , 
+      createReviewValidator ,
+       createReview);
 
 router.route('/:id')
 .get( getReviewValidator, getReview )
-.put (protrct , allowedTo('user') ,updateReviewValidator , updateReview )
-.delete(protrct , allowedTo('user','manager','admin') , deleteReviewValidator, deleteReview );
-
+.put (protrct , allowedTo('user') ,
+      updateReviewValidator ,
+      updateReview )
+.delete(protrct , allowedTo('user','manager','admin') ,
+       deleteReviewValidator,
+       deleteReview );
 
 module.exports = router;
-

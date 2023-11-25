@@ -20,7 +20,6 @@ res.status(200).json({
 });
 });
 
-
 // @desc    remove address 
 // @route   POST /api/v1/address/:addressId
 // @access  Private/user

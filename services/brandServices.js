@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const { v4: uuidv4 } = require('uuid'); // package to generate unique id 
+const { v4: uuidv4 } = require('uuid'); 
 const sharp = require('sharp'); // package that take a image and resize it by buffer
 const factory = require('./handlerFactory');
 const {uploadSingleImage} =require('../middlewares/uploadImageMiddleware');

@@ -20,7 +20,6 @@ res.status(200).json({
 });
 });
 
-
 // @desc    remove product from wishlist
 // @route   POST /api/v1/wishlist/:productId
 // @access  Private/user

@@ -73,7 +73,7 @@ const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: 100,
   message:
-  "Too many accounts created from this IP, please try again after an hour",
+  "Too many requests created from this IP, please try again after an hour",
 });
 app.use("/api/", apiLimiter);
 
@@ -87,7 +87,6 @@ app.use(
   ]
 })
 );
-
 
 // mount routes
 mountRoutes(app);

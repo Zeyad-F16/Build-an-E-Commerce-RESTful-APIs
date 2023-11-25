@@ -51,9 +51,7 @@ address:[{
     city : String,
     postalcode : String,
 }]
-
 },{timestamps: true});
-
 
 userSchema.pre('save',async function(next){
  // if you want to update a password and you write the same old password
@@ -64,5 +62,4 @@ next();
 });
 
 const User = mongoose.model('user',userSchema);
-
 module.exports = User;

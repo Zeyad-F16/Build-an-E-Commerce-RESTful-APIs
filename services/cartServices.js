@@ -19,9 +19,7 @@ return totalPrice ;
 // @access  Private/user
 exports.addProductsToCart = asyncHandler(async(req, res, next)=>{
 const { productId , color} = req.body;
-
 const product = await productModel.findById(productId);
-
 // 1- get cart for logged user
 let cart = await cartModel.findOne({ user : req.user._id });
 

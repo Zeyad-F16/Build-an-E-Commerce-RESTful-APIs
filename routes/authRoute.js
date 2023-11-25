@@ -14,6 +14,5 @@ router.post('/forgetPassword', forgetPassword);
 router.post('/verifyResetCode', verifyPasswordResetCode);
 router.put('/resetPassword', resetPassword);
 
-
 module.exports = router;
 

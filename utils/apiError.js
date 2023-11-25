@@ -6,6 +6,4 @@ class ApiError extends Error{
  this.isOperational=true;  // error that I can predict 
 }};
 
-
 module.exports =ApiError;
-

@@ -1,7 +1,5 @@
 const express = require('express');
 
-// mergeParams Allows us to access the parameters on other routers 
-// ex : we need to access the categoryId from Category route 
 const router = express.Router({ mergeParams : true });
 
 const { createSubCategory,
