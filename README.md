@@ -10,15 +10,6 @@
 
 <h4 align="center">Ecommerce API built using NodeJS & Express & MongoDB</h4>
 
-## Table of Contents
-
-- [Description](#description)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
-- [Installation](#installation)
-
-
 ## Description
 
 A RESTful API for building a full-featured E-Commerce application. This API provides the backend functionality required for managing products, users, orders, reviews, wishlist, addresses, coupons and more in an E-Commerce system.
@@ -58,6 +49,18 @@ A RESTful API for building a full-featured E-Commerce application. This API prov
 - express-mongo-sanitize
 - xss-clean
 - Stripe _(for payment processing)_
+
+-   <hr />
+    <section id="Documentation">
+      <h2># Documentation</h2>
+      <p>
+        Documentation Link :
+        <a href="https://documenter.getpostman.com/view/28843555/2s9Ye8hvvp"
+          >https://documenter.getpostman.com/view/28843555/2s9Ye8hvvp</a
+        >
+      </p>
+    </section>
+    <hr />
 
 -   <section id="Deployment">
       <h2># Deployment</h2>
