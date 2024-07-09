@@ -17,13 +17,13 @@ A RESTful API for building a full-featured E-Commerce application. This API prov
 ## Features
 
 - User authentication and authorization.
-- Categories management (CRUD)
-- Subcategories management (CRUD)
-- Brands management (CRUD)
-- Reviews management (CRUD)
-- Product management (CRUD)
-- Wishlist management (CRUD)
-- Coupons management (CRUD)
+- Categories management 
+- Subcategories management 
+- Brands management 
+- Reviews management 
+- Product management 
+- Wishlist management 
+- Coupons management 
 - User management (register, login, profile).
 - Order processing (create, view, update) with cash or card.
 - Cart functionality.
